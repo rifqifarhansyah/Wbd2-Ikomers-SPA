@@ -9,19 +9,22 @@ export const privateRoutes = [
   // {
   //   path: "/",
   //   element: Landing,
-  // },
+  // },  
   {
-    path: "/home",
+    path: "/",
     element: Home,
-  }
+  },
 ];
 
 export const publicRoutes = [
   {
-    path: "/",
+    path: "/login",
     element: Login,
   },{
     path: "/register",
     element: Register,
+  },{
+    path: "/home",
+    element: Home,
   }
 ];

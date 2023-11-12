@@ -22,8 +22,8 @@ const Navbar= ({ navbarLinks } : { navbarLinks: InterfaceNavbar[] })  => {
     }, [isToggled])
 
     return (
-    <nav className="md:hidden sticky top-0 text-black flex justify-between">
-        <div className="p-8">
+    <nav className="md:hidden sticky top-0">
+        <div className="p-8  bg-darkgreen flex justify-between">
             <img className="h-12" src={Logo} alt="Ikomers Logo" title="Ikomers Logo"/>
             <button
                 className={`w-12 h-12 transition-transform transform ${
@@ -40,7 +40,7 @@ const Navbar= ({ navbarLinks } : { navbarLinks: InterfaceNavbar[] })  => {
             </button>
         </div>
         <div className="h-0 overflow-hidden transition-all duration-300 ease-linear" ref={navLinksContainerRef}>
-            <div className="bg-black flex flex-col" ref={navLinksRef}>
+            <div className="bg-darkgreen flex flex-col" ref={navLinksRef}>
             {navbarLinks.map(({icon, text, url, action}) => {
                 if (url) {
                 return <a href={url} className="flex  flex-row gap-4 items-center transition-all duration-300 ease-linear py-8 px-8 cursor-pointer hover:pl-4" key={text}>
