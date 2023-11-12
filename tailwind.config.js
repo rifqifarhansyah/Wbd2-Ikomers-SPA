@@ -29,6 +29,7 @@ export const theme = {
       black: "#000000",
       blacklighter: "hsl(0, 0%, 20%)",
       red: "#f10000",
+      lightred: "#ff4040",
       darkgreen: "#1db954",
       lightgreen: "#1ed760",
       bggreen: "#45e47d",
