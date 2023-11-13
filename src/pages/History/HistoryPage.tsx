@@ -6,7 +6,7 @@ import Navbar from "../../components/Navigation/Navbar";
 
 import { useNavigate } from "react-router-dom";
 import SubscriptionRequest from "@/components/SubscriptionRequest/SubscriptionRequest";
-import Transfer from "@/components/WalletManagement/Transfer";
+import History from "@/components/WalletManagement/History";
 
 interface InterfaceLink {
     icon: ReactNode;
@@ -15,7 +15,7 @@ interface InterfaceLink {
     action?: () => void;
 }
 
-const TransferPage = () => {
+const HistoryPage = () => {
     // const [userID, setUserID] = useState<number>(-1);
     const [isAuth, setIsAuth] = useState<boolean>(true);
     const [isAdmin, setIsAdmin] = useState<boolean>(false);
@@ -125,8 +125,8 @@ const TransferPage = () => {
                     <Sidebar sidebarLinks={userLinks} />
                     <div className="w-full">
                         <Navbar navbarLinks={userLinks} />
-                        <main className="p-8">
-                            <Transfer/>
+                        <main className="">
+                            <History/>
                         </main>
                     </div>
                 </div>
@@ -164,4 +164,4 @@ const TransferPage = () => {
     }
 };
 
-export default TransferPage;
+export default HistoryPage;

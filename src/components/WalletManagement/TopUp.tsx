@@ -224,7 +224,7 @@ const TopUp = () => {
                     </div>
                 </div>
                 {isTopUpValid && (
-                    <div onClick={handleTopUpValid} className="hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
+                    <div onClick={handleTopUpValid} className="cursor-pointer hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
                         <button>TOP UP</button>
                     </div>
                 )}

@@ -143,7 +143,7 @@ const Transfer = () => {
                     </div>
                 </div>
                 {isTransferValid && (
-                    <div onClick={handleTransferValid} className="hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
+                    <div onClick={handleTransferValid} className="cursor-pointer hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
                         <button >TRANSFER</button>
                     </div>
                 )}

@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Transfer from "./pages/Transfer/TransferPage";
+import History from "./pages/History/HistoryPage";
 // import Landing from "./pages/Landing";
 
 // TODO : Implementasi lazyloading
@@ -34,5 +35,8 @@ export const publicRoutes = [
   },{
     path: "/transfer",
     element: Transfer,
+  },{
+    path: "/history",
+    element: History,
   }
 ];
