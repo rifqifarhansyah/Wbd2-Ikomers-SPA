@@ -43,12 +43,12 @@ const Navbar= ({ navbarLinks } : { navbarLinks: InterfaceNavbar[] })  => {
             <div className="bg-darkgreen flex flex-col" ref={navLinksRef}>
             {navbarLinks.map(({icon, text, url, action}) => {
                 if (url) {
-                return <a href={url} className="flex  flex-row gap-4 items-center transition-all duration-300 ease-linear py-8 px-8 cursor-pointer hover:pl-4" key={text}>
+                return <a href={url} className="flex  flex-row gap-4 items-center transition-all duration-300 ease-linear py-4 px-4 cursor-pointer hover:pl-8" key={text}>
                     <span className="w-8 h-8">{icon}</span>
                     <p className="text-white">{text}</p>
                 </a>
                 } else {
-                return <a className="flex  flex-row gap-4 items-center transition-all duration-300 ease-linear py-8 px-8 cursor-pointer hover:pl-4" onClick={() => action!()} key={text}>
+                return <a className="flex  flex-row gap-4 items-center transition-all duration-300 ease-linear py-4 px-4 cursor-pointer hover:pl-8" onClick={() => action!()} key={text}>
                     <span className="w-8 h-8">{icon}</span>
                     <p className="text-white">{text}</p>
                 </a>

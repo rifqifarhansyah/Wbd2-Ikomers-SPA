@@ -6,7 +6,6 @@ import Navbar from "../../components/Navigation/Navbar";
 
 import { useNavigate } from "react-router-dom";
 import SubscriptionRequest from "@/components/SubscriptionRequest/SubscriptionRequest";
-// import Transfer from "@/components/WalletManagement/Transfer";
 import TopUp from "@/components/WalletManagement/TopUp";
 
 interface InterfaceLink {
@@ -16,7 +15,7 @@ interface InterfaceLink {
     action?: () => void;
 }
 
-const Home = () => {
+const TopUpPage = () => {
     // const [userID, setUserID] = useState<number>(-1);
     const [isAuth, setIsAuth] = useState<boolean>(true);
     const [isAdmin, setIsAdmin] = useState<boolean>(false);
@@ -153,4 +152,4 @@ const Home = () => {
     }
 };
 
-export default Home;
+export default TopUpPage;

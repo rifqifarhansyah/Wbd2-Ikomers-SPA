@@ -1,6 +1,8 @@
+import TopUp from "./pages/TopUp/TopUpPage";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Transfer from "./pages/Transfer/TransferPage";
 // import Landing from "./pages/Landing";
 
 // TODO : Implementasi lazyloading
@@ -26,5 +28,11 @@ export const publicRoutes = [
   },{
     path: "/home",
     element: Home,
+  },{
+    path: "/topup",
+    element: TopUp,
+  },{
+    path: "/transfer",
+    element: Transfer,
   }
 ];

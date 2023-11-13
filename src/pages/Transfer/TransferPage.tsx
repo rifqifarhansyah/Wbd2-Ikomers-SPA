@@ -6,8 +6,7 @@ import Navbar from "../../components/Navigation/Navbar";
 
 import { useNavigate } from "react-router-dom";
 import SubscriptionRequest from "@/components/SubscriptionRequest/SubscriptionRequest";
-// import Transfer from "@/components/WalletManagement/Transfer";
-import TopUp from "@/components/WalletManagement/TopUp";
+import Transfer from "@/components/WalletManagement/Transfer";
 
 interface InterfaceLink {
     icon: ReactNode;
@@ -16,7 +15,7 @@ interface InterfaceLink {
     action?: () => void;
 }
 
-const Home = () => {
+const TransferPage = () => {
     // const [userID, setUserID] = useState<number>(-1);
     const [isAuth, setIsAuth] = useState<boolean>(true);
     const [isAdmin, setIsAdmin] = useState<boolean>(false);
@@ -115,7 +114,7 @@ const Home = () => {
                     <div className="w-full">
                         <Navbar navbarLinks={userLinks} />
                         <main className="p-8">
-                            <TopUp/>
+                            <Transfer/>
                         </main>
                     </div>
                 </div>
@@ -153,4 +152,4 @@ const Home = () => {
     }
 };
 
-export default Home;
+export default TransferPage;

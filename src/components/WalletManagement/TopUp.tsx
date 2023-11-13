@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaWallet } from 'react-icons/fa6';
 import BCA from '../../assets/bca.png';
@@ -33,17 +33,35 @@ const TopUp = () => {
         setBankAccountNumber(event.target.value);
     };
 
-    const isTopUpValid = topUpAmount > 0 && bankAccountNumber.length === 12;
+    const handleTopUpValid = () => {
+        if (isTopUpValid) {
+          // Simulasikan transaksi dengan proses validasi sederhana
+            if (Math.random() < 0.5) {
+                showToastSuccess(); // Transaksi berhasil
+            } else {
+                showToastFailure(); // Transaksi gagal
+            }
+        }
+    };
+
+    const showToastSuccess = () => {
+        toast.success("Transaksi berhasil!");
+    };
+        const showToastFailure = () => {
+        toast.error("Transaksi gagal. Silakan coba lagi.");
+    };
+
+    const isTopUpValid = topUpAmount > 0 && bankAccountNumber.length === 10;
 
     return (
         <>
             <ToastContainer />
             <div>
                 <div className="text-sm mx-auto my-auto font-semibold border-2 border-darkgreen rounded-lg flex items-center justify-start p-5 max-w-screen-2xl">
-                    <FaWallet className="mr-2" /> Saldo saat ini:&nbsp;<span className="font-normal">350.000</span>
+                    <FaWallet className="mr-2" /> Current Balance:&nbsp;<span className="font-normal">350.000</span>
                 </div>
                 <div className=" flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
-                    <h1 className="text-4xl font-semibold mb-2">Top-Up Amount?</h1>
+                    <h1 className="text-4xl font-semibold mb-2">Top-Up Amount:</h1>
 
                     <div className="mb-4">
                         <label>
@@ -87,7 +105,7 @@ const TopUp = () => {
                         <h1 className="text-4xl font-semibold mb-2">Payment Method:</h1>
                         <div className="space-y-2">
                             <div className="flex flex-col">
-                                <div className="flex flex-row">    
+                                <div className="flex flex-row items-center">    
                                     <input
                                         type="radio"
                                         id="bca"
@@ -97,7 +115,7 @@ const TopUp = () => {
                                         onChange={handlePaymentMethodChange}
                                     />
                                     <img src={BCA} alt="BCA Logo" className="w-16 h-auto m-2 mr-4" />
-                                    <label className="font-semibold text-xl" htmlFor="bca"> BCA Virtual Account</label>
+                                    <label className="font-semibold text-xl my-2" htmlFor="bca"> BCA Virtual Account</label>
                                 </div>
                                 {selectedPaymentMethod === "bca" && (
                                     <input
@@ -110,7 +128,7 @@ const TopUp = () => {
                                 )}
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex flex-row">    
+                                <div className="flex flex-row items-center">    
                                     <input
                                         type="radio"
                                         id="mandiri"
@@ -120,7 +138,7 @@ const TopUp = () => {
                                         onChange={handlePaymentMethodChange}
                                     />
                                     <img src={Mandiri} alt="Mandiri Logo" className="w-16 h-auto m-2 mr-4" />
-                                    <label className="font-semibold text-xl" htmlFor="mandiri"> Mandiri Virtual Account</label>
+                                    <label className="font-semibold text-xl my-2" htmlFor="mandiri"> Mandiri Virtual Account</label>
                                 </div>
                                 {selectedPaymentMethod === "mandiri" && (
                                     <input
@@ -133,7 +151,7 @@ const TopUp = () => {
                                 )}
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex flex-row">    
+                                <div className="flex flex-row items-center">    
                                     <input
                                         type="radio"
                                         id="bri"
@@ -143,7 +161,7 @@ const TopUp = () => {
                                         onChange={handlePaymentMethodChange}
                                     />
                                     <img src={BRI} alt="BRI Logo" className="w-16 h-auto m-2 mr-4" />
-                                    <label className="font-semibold text-xl" htmlFor="bri"> BRIVA</label>
+                                    <label className="font-semibold text-xl my-2" htmlFor="bri"> BRIVA</label>
                                 </div>
                                 {selectedPaymentMethod === "bri" && (
                                     <input
@@ -156,7 +174,7 @@ const TopUp = () => {
                                 )}
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex flex-row">    
+                                <div className="flex flex-row items-center">    
                                     <input
                                         type="radio"
                                         id="bni"
@@ -166,7 +184,7 @@ const TopUp = () => {
                                         onChange={handlePaymentMethodChange}
                                     />
                                     <img src={BNI} alt="BNI Logo" className="w-16 h-auto m-2 mr-4" />
-                                    <label className="font-semibold text-xl" htmlFor="bni"> BNI Virtual Account</label>
+                                    <label className="font-semibold text-xl my-2" htmlFor="bni"> BNI Virtual Account</label>
                                 </div>
                                 {selectedPaymentMethod === "bni" && (
                                     <input
@@ -179,7 +197,7 @@ const TopUp = () => {
                                 )}
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex flex-row">    
+                                <div className="flex flex-row items-center">    
                                     <input
                                         type="radio"
                                         id="bsi"
@@ -189,7 +207,7 @@ const TopUp = () => {
                                         onChange={handlePaymentMethodChange}
                                     />
                                     <img src={BSI} alt="BSI Logo" className="w-16 h-auto m-2 mr-4" />
-                                    <label className="font-semibold text-xl" htmlFor="bsi"> BSI Virtual Account</label>
+                                    <label className="font-semibold text-xl my-2" htmlFor="bsi"> BSI Virtual Account</label>
                                 </div>
                                 {selectedPaymentMethod === "bsi" && (
                                     <input
@@ -206,7 +224,7 @@ const TopUp = () => {
                     </div>
                 </div>
                 {isTopUpValid && (
-                    <div className="hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
+                    <div onClick={handleTopUpValid} className="hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
                         <button>TOP UP</button>
                     </div>
                 )}
