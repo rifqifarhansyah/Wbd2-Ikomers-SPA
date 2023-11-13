@@ -36,6 +36,7 @@ export const theme = {
       bluegreen: "#00bfa7",
       scrollbluegreen: "#00a08b",
       scrolldarkblue: "#007a6a",
+      borderoutline: "#eaeaea",
       primary: {
         DEFAULT: "hsl(var(--primary))",
         foreground: "hsl(var(--primary-foreground))",
