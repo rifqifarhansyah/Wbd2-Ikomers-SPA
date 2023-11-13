@@ -1,4 +1,4 @@
-import Logo from "../../assets/logo-text-color.svg";
+import Logo from "../../assets/logo-text-color.png";
 import { ToastContainer, toast } from "react-toastify";
 import React, { useEffect, useState } from "react";
 
@@ -69,8 +69,8 @@ const Login = () => {
         <>
           <ToastContainer/>
           <header className="mt-2">
-            <img src={Logo} alt="Ikomers Logo" title="Ikomers Logo" className="max-w-lg"></img>
-            <p> Log in to start using <b>Ikomers Premium App</b></p>
+            <img src={Logo} alt="iWalet Logo" title="iWalet Logo" className="max-w-lg"></img>
+            <p> Log in to start using <b>iWalet App</b></p>
           </header>
           <form  className="flex flex-col mt-4 mb-4">
             {/* FORM GROUP */}

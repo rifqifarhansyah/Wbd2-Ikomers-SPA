@@ -1,4 +1,4 @@
-import Logo from "../../assets/logo-color.svg";
+import Logo from "../../assets/logo-color.png";
 import { ReactNode, useRef, useState, useEffect } from "react";
 
 interface InterfaceNavbar {
@@ -24,7 +24,7 @@ const Navbar= ({ navbarLinks } : { navbarLinks: InterfaceNavbar[] })  => {
     return (
     <nav className="md:hidden sticky top-0">
         <div className="p-8  bg-darkgreen flex justify-between">
-            <img className="h-12" src={Logo} alt="Ikomers Logo" title="Ikomers Logo"/>
+            <img className="h-12" src={Logo} alt="iWalet Logo" title="iWalet Logo"/>
             <button
                 className={`w-12 h-12 transition-transform transform ${
                     isToggled ? 'rotate-90' : ''
