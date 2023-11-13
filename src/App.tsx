@@ -1,6 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { publicRoutes, privateRoutes } from "./routes";
+import NotFoundPage from './pages/NotFound/NotFoundPage';
 
 function App() {
   return (
@@ -16,6 +17,11 @@ function App() {
 
       ))}
 
+      {/* Catch-all route for 404 - Not Found */}
+      <Route path="*" element={<Navigate to="/notfound" />} />
+
+      {/* Not Found Page */}
+      <Route path="/notfound" element={<NotFoundPage />} />
     </Routes>
   );
 }

@@ -90,7 +90,7 @@ function Register() {
                         id="name"
                         type="text"
                         label="Enter your name:"
-                        placeholder="rifqifarhansyah"
+                        placeholder="Fullname"
                         value={[name, setName]}
                         status={isNameValid}
                         errorText="Name cannot be empty!"
@@ -99,7 +99,7 @@ function Register() {
                         id="username"
                         type="text"
                         label="Enter your username:"
-                        placeholder="rifqifarhansyah"
+                        placeholder="Username"
                         value={[username, setUsername]}
                         status={isUsernameValid}
                         errorText="Username can only be alphanumeric characters + underscore!"
@@ -108,7 +108,7 @@ function Register() {
                         id="password"
                         type="password"
                         label="Enter your password:"
-                        placeholder=""
+                        placeholder="Password"
                         value={[password, setPassword]}
                         status={isPasswordValid}
                         errorText="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit."
@@ -117,7 +117,7 @@ function Register() {
                         id="confirm"
                         type="password"
                         label="Confirm your password:"
-                        placeholder=""
+                        placeholder="Password"
                         value={[confirmation, setConfirmation]}
                         status={isConfirmationValid}
                         errorText="Confirmation password is different with password!"

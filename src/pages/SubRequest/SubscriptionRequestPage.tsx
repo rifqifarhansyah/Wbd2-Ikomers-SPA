@@ -6,7 +6,6 @@ import Navbar from "../../components/Navigation/Navbar";
 
 import { useNavigate } from "react-router-dom";
 import SubscriptionRequest from "@/components/SubscriptionRequest/SubscriptionRequest";
-// import Transfer from "@/components/WalletManagement/Transfer";
 import TopUp from "@/components/WalletManagement/TopUp/TopUp";
 
 interface InterfaceLink {
@@ -16,7 +15,7 @@ interface InterfaceLink {
     action?: () => void;
 }
 
-const Home = () => {
+const SubscriptionRequestPage = () => {
     // const [userID, setUserID] = useState<number>(-1);
     const [isAuth, setIsAuth] = useState<boolean>(true);
     const [isAdmin, setIsAdmin] = useState<boolean>(true);
@@ -119,20 +118,19 @@ const Home = () => {
 
     if (isAuth) {
         if (!isAdmin) {
-        
-        return (
-            <>
-                <div className="flex">
-                    <Sidebar sidebarLinks={userLinks} />
-                    <div className="w-full">
-                        <Navbar navbarLinks={userLinks} />
-                        <main className="p-8">
-                            <TopUp/>
-                        </main>
+            return (
+                <>
+                    <div className="flex">
+                        <Sidebar sidebarLinks={userLinks} />
+                        <div className="w-full">
+                            <Navbar navbarLinks={userLinks} />
+                            <main className="p-8">
+                                <TopUp/>
+                            </main>
+                        </div>
                     </div>
-                </div>
-            </>
-            );
+                </>
+                );
         } else {
             return (
             <>
@@ -165,4 +163,4 @@ const Home = () => {
     }
 };
 
-export default Home;
+export default SubscriptionRequestPage;

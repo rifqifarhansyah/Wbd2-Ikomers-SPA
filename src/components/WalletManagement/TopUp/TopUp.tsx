@@ -45,10 +45,11 @@ const TopUp = () => {
     };
 
     const showToastSuccess = () => {
-        toast.success("Transaksi berhasil!");
+        toast.success("Top-up successful! 😍");
     };
-        const showToastFailure = () => {
-        toast.error("Transaksi gagal. Silakan coba lagi.");
+    
+    const showToastFailure = () => {
+        toast.error("Top-up failed. 😭");
     };
 
     const isTopUpValid = topUpAmount > 0 && bankAccountNumber.length === 10;
@@ -57,10 +58,10 @@ const TopUp = () => {
         <>
             <ToastContainer />
             <div>
-                <div className="text-sm mx-auto my-auto font-semibold border-2 border-darkgreen rounded-lg flex items-center justify-start p-5 max-w-screen-2xl">
+                <div className="text-3xl text-white mx-auto my-auto font-semibold rounded-lg flex items-center justify-start p-5 max-w-screen-2xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-darkgreen via-lightgreen to-verylightgreen">
                     <FaWallet className="mr-2" /> Current Balance:&nbsp;<span className="font-normal">350.000</span>
                 </div>
-                <div className=" flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
+                <div className="rounded-xl border border-darkgreen mt-4 shadow-lg flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
                     <h1 className="text-4xl font-semibold mb-2">Top-Up Amount:</h1>
 
                     <div className="mb-4">
@@ -88,7 +89,7 @@ const TopUp = () => {
                         <ButtonNumber amount={10000000} onClickFunction={handleTopUp} />
                     </div>
                 </div>
-                <div className=" flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
+                <div className="rounded-xl border border-darkgreen mt-4 shadow-lg flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
                     <div>
                         <h1 className="text-4xl font-semibold mb-2">Payment Method:</h1>
                         <div className="space-y-2">

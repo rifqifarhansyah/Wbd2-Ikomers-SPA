@@ -40,6 +40,7 @@ export const theme = {
       scrolldarkblue: "#007a6a",
       borderoutline: "#eaeaea",
       greytext: "#8E969D",
+      yellow: "#FDFD00",
       primary: {
         DEFAULT: "hsl(var(--primary))",
         foreground: "hsl(var(--primary-foreground))",

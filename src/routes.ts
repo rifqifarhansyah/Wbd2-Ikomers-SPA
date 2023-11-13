@@ -4,6 +4,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Transfer from "./pages/Transfer/TransferPage";
 import History from "./pages/History/HistoryPage";
+import SubscriptionRequest from "./pages/SubRequest/SubscriptionRequestPage";
 // import Landing from "./pages/Landing";
 
 // TODO : Implementasi lazyloading
@@ -38,5 +39,8 @@ export const publicRoutes = [
   },{
     path: "/history",
     element: History,
+  },{
+    path: "/sub",
+    element: SubscriptionRequest,
   }
 ];

@@ -114,11 +114,11 @@ const HistoryPage = () => {
         },
     ];
 
-    // TO DO :  Set admin dan auth dari rest
+    
 
     if (isAuth) {
         if (!isAdmin) {
-        // TODO: Pass user ID ke dalam WalletManagement
+        
         return (
             <>
                 <div className="flex">

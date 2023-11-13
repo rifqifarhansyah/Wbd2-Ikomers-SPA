@@ -35,10 +35,10 @@ const SubscriptionRequest = () => {
         <>
             <ToastContainer />
             <div className="pb-44">
-                <header className="mt-2">
-                    <h1 className="font-bold text-4xl">Subscription <span  className="text-darkgreen">Request</span></h1>
-                    <div className="mt-2 bg-black text-white inline-block  py-1 px-2">
-                        <i><span className="text-lightgreen">Accept</span> or <span className="text-lightred">reject</span> user subscription request</i>
+                <header className="text-white rounded-lg bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-darkgreen via-lightgreen to-verylightgreen p-4">
+                    <h1 className="font-bold text-4xl">Subscription Request ✨</h1>
+                    <div className=" px-2">
+                        <i>Accept or reject user subscription request~</i>
                     </div>
                 </header>
                 <div className="sus-table mt-0.5">

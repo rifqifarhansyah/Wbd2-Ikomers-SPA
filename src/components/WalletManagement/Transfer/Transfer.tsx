@@ -38,11 +38,11 @@ const Transfer = () => {
     };
 
     const showToastSuccess = () => {
-        toast.success("Transaksi berhasil!");
+        toast.success("Transfer successful! 😍");
     };
 
     const showToastFailure = () => {
-        toast.error("Transaksi gagal. Silakan coba lagi.");
+        toast.error("Transfer failed. 😭");
     };
 
     const formatNumber = (value) => {
@@ -82,10 +82,10 @@ const Transfer = () => {
         <>
             <ToastContainer />
             <div>
-                <div className="text-sm mx-auto my-auto font-semibold border-2 border-darkgreen rounded-lg flex items-center justify-start p-5 max-w-screen-2xl">
-                    <FaWallet className="mr-2" /> Current Balance:&nbsp;<span className="font-normal">350.000</span>
+                <div className="text-3xl text-white mx-auto my-auto font-semibold rounded-lg flex items-center justify-start p-5 max-w-screen-2xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-darkgreen via-lightgreen to-verylightgreen">
+                    <FaWallet className="mr-2" /> Current Balance:&nbsp;<span className="font-thin">350.000</span>
                 </div>
-                <div className=" flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
+                <div className="rounded-xl border border-darkgreen mt-4 shadow-lg flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
                     <h1 className="text-4xl font-semibold mb-2">Transfer Amount:</h1>
 
                     <div className="mb-4">
@@ -113,7 +113,7 @@ const Transfer = () => {
                         <ButtonNumber amount={10000000} onClickFunction={handleTransfer} />
                     </div>
                 </div>
-                <div className=" flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
+                <div className="rounded-xl border border-darkgreen mt-4 shadow-lg flex wrap md:flex-col flex-col my-0 mx-auto p-5 max-w-screen-2xl">
                     <div>
                         <h1 className="text-4xl font-semibold mb-2">Recipient Number:</h1>
                         <div className="space-y-2">
