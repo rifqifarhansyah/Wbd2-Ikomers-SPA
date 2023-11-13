@@ -6,7 +6,7 @@ import Navbar from "../../components/Navigation/Navbar";
 
 import { useNavigate } from "react-router-dom";
 import SubscriptionRequest from "@/components/SubscriptionRequest/SubscriptionRequest";
-import TopUp from "@/components/WalletManagement/TopUp";
+import TopUp from "@/components/WalletManagement/TopUp/TopUp";
 
 interface InterfaceLink {
     icon: ReactNode;

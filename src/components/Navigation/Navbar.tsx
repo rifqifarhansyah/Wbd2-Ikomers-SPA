@@ -22,7 +22,7 @@ const Navbar= ({ navbarLinks } : { navbarLinks: InterfaceNavbar[] })  => {
     }, [isToggled])
 
     return (
-    <nav className="md:hidden sticky top-0">
+    <nav className="md:hidden sticky top-0 z-10">
         <div className="p-8  bg-darkgreen flex justify-between">
             <img className="h-12" src={Logo} alt="iWalet Logo" title="iWalet Logo"/>
             <button
