@@ -38,22 +38,29 @@ const Transfer = () => {
 
     const showToastSuccess = () => {
         toast.success("Transaksi berhasil!");
-    };
-        const showToastFailure = () => {
+      };
+      
+      const showToastFailure = () => {
         toast.error("Transaksi gagal. Silakan coba lagi.");
-    };
-    
+      };
+      
 
     // Function to format input value with thousands separators
     const formatNumber = (value) => {
-        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        return Intl.NumberFormat().format(value);
+    };
+
+    const handleTransfer = (amount) => {
+        // Update the input value and the balance when the user tops up
+        setTransferAmount(amount);
+        setBalance((prevBalance) => prevBalance + amount);
     };
 
     const handleiWaletChange = (event) => {
         setiWaletNumber(event.target.value);
     };
 
-    const handleTransfer = () => {
+    const handleTransferValid = () => {
         if (isTransferValid) {
           // Simulasikan transaksi dengan proses validasi sederhana
             if (Math.random() < 0.5) {
@@ -101,22 +108,22 @@ const Transfer = () => {
                     </div>
 
                     <div className="md:space-y-0 space-y-2">
-                        <button onClick={() => handleTopUp(500000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-8 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
+                        <button onClick={() => handleTransfer(500000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-8 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
                             500rb
                         </button>
-                        <button onClick={() => handleTopUp(1000000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
+                        <button onClick={() => handleTransfer(1000000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
                             1jt
                         </button>
-                        <button onClick={() => handleTopUp(2000000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
+                        <button onClick={() => handleTransfer(2000000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
                             2jt
                         </button>
-                        <button onClick={() => handleTopUp(2500000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
+                        <button onClick={() => handleTransfer(2500000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
                             2.5jt
                         </button>
-                        <button onClick={() => handleTopUp(5000000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
+                        <button onClick={() => handleTransfer(5000000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
                             5jt
                         </button>
-                        <button onClick={() => handleTopUp(10000000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
+                        <button onClick={() => handleTransfer(10000000)} className="bg-white border-2 border-borderoutline rounded-xl text-black px-4 py-1 rounded mr-2 focus:border-darkgreen focus:bg-lightgreen focus:bg-opacity-60 ">
                             10jt
                         </button>
                     </div>
@@ -136,7 +143,7 @@ const Transfer = () => {
                     </div>
                 </div>
                 {isTransferValid && (
-                    <div onClick={handleTransfer} className="hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
+                    <div onClick={handleTransferValid} className="hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
                         <button >TRANSFER</button>
                     </div>
                 )}

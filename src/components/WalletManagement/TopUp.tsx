@@ -16,7 +16,7 @@ const TopUp = () => {
 
     // Function to format input value with thousands separators
     const formatNumber = (value) => {
-        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        return Intl.NumberFormat().format(value);
     };
 
     const handleTopUp = (amount) => {
