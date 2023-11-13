@@ -1,4 +1,5 @@
-import Logo from "../../assets/logo-text-color.png";
+import LogoText from "../../assets/logo-text-color.png";
+import Logo from "../../assets/logo-color.png";
 import { ToastContainer, toast } from "react-toastify";
 import React, { useEffect, useState } from "react";
 
@@ -65,11 +66,12 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="flex wrap md:flex-col my-0 mx-auto p-10  max-w-screen-2xl">
+      <div className="flex wrap flex-col md:flex-col my-0 mx-auto p-4 max-w-screen-2xl">
         <>
           <ToastContainer/>
           <header className="mt-2">
-            <img src={Logo} alt="iWalet Logo" title="iWalet Logo" className="max-w-lg"></img>
+            <img src={LogoText} alt="iWalet Logo" title="iWalet Logo" className="max-w-lg hidden md:flex"></img>
+            <img src={Logo} alt="iWalet Logo" title="iWalet Logo" className="max-w-xs flex md:hidden"></img>
             <p> Log in to start using <b>iWalet App</b></p>
           </header>
           <form  className="flex flex-col mt-4 mb-4">
