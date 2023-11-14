@@ -9,12 +9,14 @@ import Mandiri from '../../../assets/mandiri.png';
 import BRI from '../../../assets/briva.png';
 import BNI from '../../../assets/bni.png';
 import BSI from '../../../assets/bsi.png';
+import Modal from "../Modal";
 
 const TopUp = () => {
     const [balance, setBalance] = useState(1000);
     const [topUpAmount, setTopUpAmount] = useState(0);
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
     const [bankAccountNumber, setBankAccountNumber] = useState('');
+    const [popUp, setPopUp] = useState(false)
 
     const formatNumber = (value) => {
         return Intl.NumberFormat().format(value);
@@ -147,8 +149,9 @@ const TopUp = () => {
                     </div>
                 </div>
                 {isTopUpValid && (
-                    <div onClick={handleTopUpValid} className="cursor-pointer hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
-                        <button>TOP UP</button>
+                    <div>
+                        <button onClick={() => setPopUp(true)} className="flex items-center mt-5 cursor-pointer hover:bg-lightgreen text-lg mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">TRANSFER</button>
+                        {popUp && <Modal setPopUp={setPopUp} handleTransferValid={handleTopUpValid} modalTitle={"TOP-UP"} modalText={"top-up"} amount={`${topUpAmount}`} modalTextIng={"top-up"} prePositionWord={"to"}/>} 
                     </div>
                 )}
             </div>

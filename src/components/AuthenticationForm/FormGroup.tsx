@@ -1,22 +1,22 @@
 import { useState } from 'react';
 
 const FormGroup = ({
-  id,
-  type,
-  label,
-  placeholder,
-  value,
-  status,
-  errorText,
-}: {
-  id: string;
-  type: string;
-  label: string;
-  placeholder: string;
-  value: (string | React.Dispatch<React.SetStateAction<string>>)[];
-  status: boolean;
-  errorText: string;
-}) => {
+    id,
+    type,
+    label,
+    placeholder,
+    value,
+    status,
+    errorText,
+  }: {
+    id: string;
+    type: string;
+    label: string;
+    placeholder: string;
+    value: (string | React.Dispatch<React.SetStateAction<string>>)[];
+    status: boolean;
+    errorText: string;
+  }) => {
   const [touched, setTouched] = useState(false);
 
   return (

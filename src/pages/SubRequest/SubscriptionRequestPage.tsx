@@ -1,6 +1,8 @@
 import { ReactNode, useState } from "react";
+import { Link } from 'react-router-dom';
 import Sidebar from "../../components/Navigation/Sidebar";
 import Navbar from "../../components/Navigation/Navbar";
+import Logo from "../../assets/logo-text-color.png";
 
 // import { REST_BASE_URL } from "@/constant/constants";
 
@@ -148,17 +150,21 @@ const SubscriptionRequestPage = () => {
         }
     } else {
         return (
-            <>
-                <div className="flex">
-                    <Sidebar sidebarLinks={adminLinks} />
-                    <div className="w-full">
-                        <Navbar navbarLinks={adminLinks} />
-                        <main className="p-8">
-                            <h1>Loading ...</h1>
-                        </main>
-                    </div>
-                </div>
-            </>
+            <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+                <img
+                    src={Logo}
+                    alt="App Logo"
+                    className="max-w-lg"
+                />
+
+                <p className="text-lg text-black mb-1">
+                    You don't have access to this page.
+                </p>
+
+                <Link to="/login" className="text-blue-500 hover:text-darkgreen">
+                    Go back to login
+                </Link>
+            </div>
         );
     }
 };

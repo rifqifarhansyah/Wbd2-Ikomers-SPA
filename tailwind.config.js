@@ -34,6 +34,7 @@ export const theme = {
       darkgreenhistory: "#14833a",
       lightgreen: "#1ed760",
       verylightgreen: "#97f0b6",
+      mostlightgreen: "#dafae6",
       bggreen: "#45e47d",
       bluegreen: "#00bfa7",
       scrollbluegreen: "#00a08b",

@@ -5,6 +5,7 @@ import { FaWallet } from 'react-icons/fa6';
 import Logo from '../../../assets/logo-color.svg'
 import ButtonNumber from "../ButtonNumber";
 import ReceiptSingle from "./ReceiptSingle";
+import Modal from "../Modal";
 
 const Transfer = () => {
     const [balance, setBalance] = useState(1000);
@@ -19,6 +20,7 @@ const Transfer = () => {
     const [receiverIwaletID, setReceiverIwaletID] = useState("87654321");
     const [transactionCode, setTransactionCode] = useState("");
     const [receiptVisible, setReceiptVisible] = useState(false);
+    const [popUp, setPopUp] = useState(false)
 
     const generateTransactionCode = () => {
         const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -128,8 +130,9 @@ const Transfer = () => {
                     </div>
                 </div>
                 {isTransferValid && (
-                    <div onClick={handleTransferValid} className="cursor-pointer hover:bg-lightgreen text-sm mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">
-                        <button >TRANSFER</button>
+                    <div>
+                        <button onClick={() => setPopUp(true)} className="flex items-center mt-5 cursor-pointer hover:bg-lightgreen text-lg mx-auto my-auto font-bold border-2 border-white text-white text-center items-center bg-darkgreen rounded-lg p-5 max-w-screen-sm">TRANSFER</button>
+                        {popUp && <Modal setPopUp={setPopUp} handleTransferValid={handleTransferValid} modalTitle={"TRANSFER"} modalText={"transfer"} amount={`${transferAmount}`} modalTextIng={"transfering"} prePositionWord={"from"}/>} 
                     </div>
                 )}
                 <div className="text-center">

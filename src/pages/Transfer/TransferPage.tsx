@@ -19,7 +19,7 @@ interface InterfaceLink {
 
 const TransferPage = () => {
     // const [userID, setUserID] = useState<number>(-1);
-    const [isAuth, setIsAuth] = useState<boolean>(false);
+    const [isAuth, setIsAuth] = useState<boolean>(true);
     const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
     const navigate = useNavigate();
